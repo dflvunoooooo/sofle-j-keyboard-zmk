@@ -60,10 +60,10 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - CLCK
   - MUTE
+  - RLCK
   - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-control$$
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:apple-keyboard-option$$
   - layer2
   layer1:
   - {t: '`', s: '~'}
