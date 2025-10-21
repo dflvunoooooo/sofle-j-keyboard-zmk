@@ -75,7 +75,6 @@
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
             display-name = "QWERTZ";
-            >;
         };
 
         layer_1 {
