@@ -52,30 +52,17 @@
     keymap {
         compatible = "zmk,keymap";
 
-//
-// neo2: Ebene 1 = Buchstaben, Ebene 2 = Großbuchstaben, Ebene 3 = Zeichen, Ebene 4 = Navigation, Ebene 5 = Griechisch, Ebene 6 = Mathesymbole
-//
-// keymap profile 0: os:neo2 actual:neo2
-// -------------------------------------------------------------------------------------------------------------------------------------
-// | GRAVE |   1   |   2   |   3   |   4   |   5   |             VOL_UP              |   6   |   7   |   8   |   9   |   0   |   -   |
-// | ESC   |   Q   |   W   |   E   |   R   |   T   | PRV_Track |  MUTE   | NXT_Track |   Z   |   U   |   I   |   O   |   P   |   Ü   |
-// | TAB   |   A   |   S   |   D   |   F   |   G   |             VOL_DN              |   H   |   J   |   K   |   L   |   Ö   |   Ä   |
-// | SHIFT |   Z   |   X   |   C   |   V   |   B   |               ---               |   N   |   M   |   ,   |   .   |   -   | SHIFT |
-//                 |  Mod1 |  Ebe4 |  CRTL |  RET  |   Ebe3    |   ---   |    Ebe3   | SPACE | CRTL  |  Ebe4 |  Mod2 | 
-// -------------------------------------------------------------------------------------------------------------------------------------
-        default_layer {
+        layer0 {
             bindings = <
-//----------|------------|------------|------------         |------------|------------|------    ------|------------|------------|------------|------------|------------|------------|
-&kp GRAVE    &kp N1       &kp N2       &kp N3               &kp N4       &kp N5                        &kp K_VOL_UP                  &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &kp BACKSPACE
-&kp ESC      &kp Q        &kp W        &kp E                &kp R        &kp T                         &kp K_VOL_DN                  &kp Y        &kp U        &kp I        &kp O        &kp P        &kp MINUS
-&kp TAB      &kp A        &kp S        &kp D                &kp F        &kp G                         &kp C_PREV                    &kp H        &kp J        &kp K        &kp L        &kp SEMI     &kp APOS
-&kp LSHFT    &kp Z        &kp X        &kp C                &kp V        &kp B                         &kp C_NEXT                    &kp N        &kp M        &kp COMMA    &kp DOT      &kp SLASH    &kp RIGHT_SHIFT
-&trans                    &mo 1        &kp NON_US_BACKSLASH &kp LCTRL    &kp ENTER    &kp CLCK         &kp K_MUTE       &kp SPACE    &kp RCTRL    &kp SPACE    &kp ENTER    &mo 2        
+&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
+&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
+&kp CAPS    &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
+&kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
             display-name = "QWERTZ";
-            >;
         };
 
         layer_1 {
