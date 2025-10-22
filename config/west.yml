@@ -21,9 +21,8 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk_locales
+    - name: zmk-locales
       remote: joelspadin
       revision: main
-      import: include/locale/keys_de.h
   self:
     path: boards
