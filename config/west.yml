@@ -24,5 +24,6 @@ manifest:
     - name: zmk_locales
       remote: joelspadin
       revision: main
+      import: include/locale/keys_de.h
   self:
     path: boards
